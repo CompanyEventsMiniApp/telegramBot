@@ -1,3 +1,5 @@
+ARG BOT_TOKEN
+
 FROM maven:3.8-openjdk-17 AS builder
 LABEL authors="ded_mikhey"
 
@@ -15,7 +17,7 @@ WORKDIR /app
 
 COPY --from=builder /app/target/*.jar app.jar
 
-ENV BOT_TOKEN=${BOT_TOKEN}
+ENV BOT_TOKEN=$BOT_TOKEN
 
 EXPOSE 8080
 
