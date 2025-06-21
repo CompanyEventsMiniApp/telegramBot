@@ -15,7 +15,7 @@ WORKDIR /app
 
 COPY --from=builder /app/target/*.jar app.jar
 
-ENV BOT_TOKEN=5855308874:AAGNM_L5gGORvfl5dAyh1iOgv1NwPqzLx-k
+ENV BOT_TOKEN=${BOT_TOKEN}
 
 EXPOSE 8080
 
